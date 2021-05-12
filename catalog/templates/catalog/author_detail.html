@@ -1,0 +1,18 @@
+<!--challenge part6-->
+{% extends "base_generic.html" %}
+{% block content %}
+	<h1>Autor: {{author.first_name}} {{author.last_name}}</h1>
+	<p><strong>Fecha de nacimiento: </strong>{{author.date_of_birth}}</p>
+	{%if author.date_of_death%}
+		<p><strong>Fecha de muerte: </strong>{{author.date_of_death}}</p>
+	{%endif%}
+
+	<div style="margin-left: 20px;margin-top: 20px;">
+		<h4>Libros</h4>
+		{%for libro in author.book_set.all%}
+			<hr>
+			<p><strong><a href="{{libro.get_absolute_url}}">{{libro.title}}</a></strong></p>
+			<p>{{libro.summary}}</p>
+		{%endfor%}
+	</div>
+{% endblock %}

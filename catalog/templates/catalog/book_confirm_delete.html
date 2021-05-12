@@ -1,0 +1,10 @@
+<!--part9 challenge-->
+{%extends "base_generic.html"%}
+{%block content%}
+	<h1>Borrar Libro</h1>
+	<p>¿Estai seguro de querer borrar el libro: {{book}}?</p>
+	<form action="" method="post">
+		{%csrf_token%}
+		<input type="submit" value="Si borrar">
+	</form>
+{%endblock%}
