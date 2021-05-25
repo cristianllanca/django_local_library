@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '#f9ratotr%#cockq7482(8@=jm5)d%
 #part11 DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['infinite-tor-64561.herokuapp.com','127.0.0.1']
 
 
 # Application definition
